@@ -46,7 +46,7 @@
     $missatge = 'Hola'; // ambit global
 
     function saluda(){
-        echo $missatge; // no es pot accedir a la variable global
+        // echo $missatge; // no es pot accedir a la variable global
         $intern = 'Adeu'; // ambit local
     }
 
