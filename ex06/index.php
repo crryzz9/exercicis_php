@@ -38,7 +38,6 @@ const REF1 = 'CAM-1425376';
             <p class="preu">Preu amb IVA (21%): <?= number_format($preuTotal, 2, ',') . MONEDA; ?></p>
             <p class="total">TOTAL: <?= number_format($preuTotal, 2, ',') . MONEDA; ?></p>
             <p class="preu">Preu soci amb descompte (10%): <?= number_format($preuSoci, 2, ',') . MONEDA; ?></p>
-
             <p class="estoc">Unidades disponibles: <?= $estoc1 ?></p>
             <p class="ref"><?= REF1 ?></p>
         </article>

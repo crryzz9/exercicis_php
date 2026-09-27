@@ -1,0 +1,49 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background: black; 
+    padding: 2rem; 
+}
+header h1 { 
+    color: white; 
+    text-transform: uppercase; 
+    margin: 0; 
+}
+header p { 
+    color: #8FB3B0; 
+}
+.fitxa { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 1.5rem 2rem; 
+    max-width: 500px; 
+}
+.classe { 
+    color: gray; 
+    text-transform: uppercase; 
+}
+.barra { 
+    background: #E1E8E8; 
+    border-radius: 99px; 
+    height: 14px; 
+    overflow: hidden; 
+    margin-bottom: 1rem; 
+}
+.barra span { 
+    display: block; 
+    height: 100%; 
+    border-radius: 99px; 
+}
+.barra .vida { 
+    background: green; 
+}
+.barra .fuerza { 
+    background: darkblue; 
+}
+.ferit { 
+    display: inline-block; 
+    padding: .4rem 1rem; 
+    border-radius: 99px; 
+    background: #FBEDE3; 
+    color: red; 
+    font-weight: bold; 
+}
