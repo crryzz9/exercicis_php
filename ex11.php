@@ -57,11 +57,30 @@ echo "Ahora la cadena es: " . strtoupper($cadena) . "<br>"; // devuelve "PHP ES 
 
 // Exercici 1: Busca en php.net la funcion str_word_count() y pon un ejemplo
 
+// str_word_count() cuenta el número de palabras en el string string. 
+// Si el argumento opcional format no está especificado, entonces el valor devuelto 
+// será un integer, representando el número de palabras encontradas. Si format está especificado,
+//  el valor devuelto será un array, que depende del formato format. Los valores posibles para 
+// format se listan a continuación
 
+echo "Ejemplo con str_word_count: " . str_word_count("Hola Alejandra, buenos dias") . "<br>"; // devuelve 4, ya que hay 4 palabras en la cadena
 
 // Exercici 2: Funcion levenshtein() y pon un ejemplo
 
+// levenshtein() calcula la distancia de Levenshtein entre dos cadenas.
+// La distancia de Levenshtein es el número mínimo de operaciones necesarias para 
+// transformar una cadena
+
+echo "Ejemplo con levenshtein: " . levenshtein("Alejandra", "Alejandro") . "<br>"; // devuelve 1, ya que hay que cambiar 1 letra para transformar Alejandra en Alejandro
+
 // Exercici 3: Funcion que es el operador ternario (?) y pon un ejemplo
+
+// El operador ternario es una forma abreviada de escribir una sentencia if-else
+// sintaxis: $variable = (condición) ? valor_si_true : valor_si_false;
+
+$edad = 20;
+$comprobacion = ($edad >= 18) ? "Mayor de edad" : "Menor de edad";
+echo "Ejemplo con operador ternario: " . $comprobacion . "<br>";
 
 // Exercici 4: explica que hace esta funcion:
 function funcioMultipleReturns($v1, $v2, $v3) {
@@ -71,6 +90,9 @@ function funcioMultipleReturns($v1, $v2, $v3) {
     return array($v1, $v2, $v3);
 }
 
+// La función funcioMultipleReturns() recibe tres parámetros ($v1, $v2, $v3) y 
+// les asigna nuevos valores. Permite devolver valores a la vez en forma de un array
+
 // Exercici 5: Crea una funcion comprova_email() que reciba una cadena como parametro y hace las siguientes:
 // comprobaciones: 
 
@@ -78,7 +100,19 @@ function funcioMultipleReturns($v1, $v2, $v3) {
 // - eliminar todos los espacios en blanco al principio y al final de la cadena
 // - comprobar que la cadena contiene un @
 // - contar el numero de caracteres de la cadena
-
+$email = "     virehe@jviladoms.cat      ";
+function comprova_email($email) {
+    $email = strtolower($email);
+    $email = trim($email);
+    echo "email: $email" . "<br>";
+    if (strpos($email, "@") === false) {
+        echo "El email no contiene un @" . "<br>";
+    } else {
+        echo "El email contiene un @" . "<br>";
+    }
+    echo "El email tiene " . strlen($email) . " caracteres" . "<br>";
+}
+echo comprova_email($email) . "<br>";
 // FALTAAAAA!!
 
 ?>
