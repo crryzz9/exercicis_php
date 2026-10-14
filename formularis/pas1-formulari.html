@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+    
+    <h1>Incripció al festival</h1>
+    <!-- action: donde van los datos -->
+    <!-- method: como se envían los datos GET o POST -->
+    <form action="pas1-resultat.php" method="POST">
+        <label for="nom">Nom:</label>
+        <input id="nom" name="nom" type="text">
+
+        <label for="correu">Correu:</label>
+        <input id="correu" name="correu" type="email">
+
+        <label for="dia">Dia:</label>
+        <select id="dia" name="dia">
+            <option value="divendres">Divendres</option>
+            <option value="dissabte">Dissabte</option>
+        </select>
+
+        <button>Incriure'm</button>
+    </form>
+</body>
+</html>

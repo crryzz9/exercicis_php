@@ -1,0 +1,150 @@
+/* ===== Variables ===== */
+:root {
+    --color-fons: #0f0c1d;
+    --color-targeta: rgba(255, 255, 255, 0.06);
+    --color-vora: rgba(255, 255, 255, 0.14);
+    --color-text: #f3f1fa;
+    --color-suau: #a9a3c4;
+    --color-accent: #c9a24b;
+    --color-accent-clar: #e8c873;
+    --radi: 12px;
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    color: var(--color-text);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(201, 162, 75, 0.18), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(110, 80, 200, 0.25), transparent 45%),
+        var(--color-fons);
+}
+
+/* ===== Títol ===== */
+h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+    background: linear-gradient(90deg, var(--color-accent-clar), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 0.8rem auto 0;
+    background: var(--color-accent);
+}
+
+/* ===== Formulari ===== */
+form {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    background: var(--color-targeta);
+    border: 1px solid var(--color-vora);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+label {
+    margin-bottom: 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-suau);
+}
+
+input,
+select {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 1rem;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-vora);
+    border-radius: var(--radi);
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+input::placeholder {
+    color: var(--color-suau);
+}
+
+input:hover,
+select:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 0 4px rgba(201, 162, 75, 0.18);
+}
+
+/* Fletxa personalitzada del select */
+select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a24b' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+select option {
+    color: var(--color-text);
+    background: var(--color-fons);
+}
+
+/* ===== Botó ===== */
+button {
+    margin-top: 0.5rem;
+    padding: 0.95rem;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-fons);
+    background: linear-gradient(135deg, var(--color-accent-clar), var(--color-accent));
+    border: none;
+    border-radius: var(--radi);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(201, 162, 75, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
